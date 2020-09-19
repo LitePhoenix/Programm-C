@@ -92,12 +92,12 @@ int main()
     
   }
     printf ("Введите место корабля: \n");
-    scanf ("%c", &m);
-    scanf ("%c", &m);
+    scanf ("%c", &l);
+    scanf ("%c", &l);
     scanf ("%d", &j);
-    t=char_to_num(m);
+    i=char_to_num(l);
     j=j-1;
-    b[t][j] = 1;
+    b[i][j] = 1;
     print_secret_matrix(b);
     return 0;
 }
