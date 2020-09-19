@@ -67,6 +67,7 @@ int main()
                }
            }
            printf ("Сумма элементов на главной диагонале: %d\n", sum);
+           print_matrix(a);
         }
         sum=0;
         if (command==2)
@@ -81,6 +82,7 @@ int main()
            }
            mean=sum/count;
            printf ("Среднее значение элементов матрицы: %.1f\n", mean);
+           print_matrix(a);
         }
         if (command==3)
         {
@@ -93,6 +95,7 @@ int main()
                }
            }
            printf ("Максимальное значение элементов матрицы: %d\n", max);
+           print_matrix(a);
         }
         min=a[0][0];
         if (command==4)
@@ -106,6 +109,7 @@ int main()
                }
            }
            printf ("Минимальное значение элементов матрицы: %d\n", min);
+           print_matrix(a);
         }
         if (command==5)
         {
