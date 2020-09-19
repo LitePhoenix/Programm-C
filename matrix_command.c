@@ -11,11 +11,35 @@
 #include <stdio.h>
 
 
+const int arr_size = 3;
+
+void data()
+{
+    printf ("Здесь находится описание программы:\nкоманда 0 - выход;\nкоманда 1 - сумма элементов на главной диагонале;\n");
+    printf ("команда 2 - среднее значение элементов матрицы;\nкоманда 3 - наибольшее значение элементов матрицы;\n");
+    printf ("команда 4 - наименьшее значение элементов матрицы;\nкоманда 5 - изменение значения элемента матрицы;\n");
+    printf ("команда 6 - сохранить результат в файл;\nкоманда 7 - траспонировать матрицу.\n");
+}
+
+void print_matrix(int mat[arr_size][arr_size])
+{
+    int i,j;
+    for (i = 0; i<arr_size; i++) 
+    {
+        for (j = 0; j<arr_size; j++)
+        {    
+            printf ("%6d", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 int main()
-{   const int arr_size = 3;
+{   
     int a[arr_size][arr_size];
     int i, j, max=0, sum=0, min, file, command;
     float mean, count=0;
+    data();
     printf ("Введите значения элементов массива: ");
     for (i = 0; i<arr_size; i++) 
   {
@@ -90,6 +114,7 @@ int main()
            scanf ("%d", &j);
            printf ("Введите новое значение элемента матрицы: \n");
            scanf ("%d", &a[i][j]);
+           print_matrix(a);
         }
     }
     return 0;
